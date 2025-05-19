@@ -1,11 +1,19 @@
 import type { Metadata } from "next";
-import { GeistSans } from "geist/font/sans";
+import { Inter } from "next/font/google";
 import "./globals.css";
 
+// Using Inter as it's more widely supported than Geist (but you can keep Geist if you prefer)
+const inter = Inter({ 
+  subsets: ["latin"],
+  variable: "--font-inter",
+});
+
+// Update metadata to match your business
 export const metadata: Metadata = {
   title: "Master Stitch Tailoring | Premium Alterations & Repairs in Cubao, QC",
-  description: "Expert tailoring...",
-  keywords: "tailoring Quezon City...", 
+  description: "Expert tailoring, alterations, and clothing repairs in Cubao, Quezon City. 20+ years experience in precision craftsmanship for suits, dresses, and all garments.",
+  keywords: "tailoring Quezon City, alterations Cubao, clothing repairs, suit tailoring, dress alterations, zipper replacement",
+  themeColor: "#ffffff",
 };
 
 export default function RootLayout({
@@ -15,7 +23,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="scroll-smooth">
-      <body className={`${GeistSans.className} antialiased text-gray-800 bg-white`}>
+      <body className={`${inter.variable} font-sans antialiased text-gray-800 bg-white`}>
         {children}
       </body>
     </html>
