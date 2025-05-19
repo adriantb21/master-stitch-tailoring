@@ -2,13 +2,11 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 
-// Using Inter as it's more widely supported than Geist (but you can keep Geist if you prefer)
 const inter = Inter({ 
   subsets: ["latin"],
   variable: "--font-inter",
 });
 
-// Update metadata to match your business
 export const metadata: Metadata = {
   title: "Master Stitch Tailoring | Premium Alterations & Repairs in Cubao, QC",
   description: "Expert tailoring, alterations, and clothing repairs in Cubao, Quezon City. 20+ years experience in precision craftsmanship for suits, dresses, and all garments.",
